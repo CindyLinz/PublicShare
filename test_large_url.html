@@ -1,0 +1,13 @@
+<body>
+<script>
+var gen = '';
+var i;
+for(i=1048576*2; i>=0; --i)
+    gen += 'x';
+var link = document.createElement('a');
+link.href = 'data:application/octet-stream,' + encodeURIComponent(gen);
+link.innerHTML = 'download';
+link.download = 'xxx.js';
+document.getElementsByTagName('body')[0].appendChild(link);
+</script>
+</body>
