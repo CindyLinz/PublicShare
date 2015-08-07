@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 300 300">
+    <rect width="220" height="50" x="40" y="125" style="fill:#96c;stroke:transparent" />
+    <text x="150" y="150" style="font-family:sans-serif;font-size:30px;font-weight:bold;fill:#fff;stroke:transparent;text-anchor:middle;dominant-baseline:middle;">The Button</text>
+    <g transform="translate(150 150) scale(0.4) rotate(-30) translate(-150 -150)">
+        <path d="M 50,150 a 100,100 0 0,0 200,0 a 100,100 0 0,0 -200,0 l 25,0 a 75,75 0 0,1 150,0 a 75,75 0 0,1 -150,0 z" style="fill:#f00;stroke:transparent" />
+        <rect width="170" height="40" x="65" y="130" style="fill:#f00;stroke:transparent" />
+        <text x="150" y="150" style="font-family:sans-serif;font-size:28px;fill:#fff;stroke:transparent;text-anchor:middle;dominant-baseline:middle;">Disabled</text>
+    </g>
+</svg>
