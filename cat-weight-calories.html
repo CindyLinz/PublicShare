@@ -1,0 +1,28 @@
+貓咪體重(或理想體重) <input name=cat-weight value=8>kg<br>
+貓咪狀態
+<label><input name=cat-status type=radio value=2.5- checked>幼貓(未結紮)</label>
+<label><input name=cat-status type=radio value=1.2-1.4>已結紮成貓</label>
+<label><input name=cat-status type=radio value=1.4-1.6>未結紮成貓</label>
+<label><input name=cat-status type=radio value=0.8-1.0>過胖的成貓</label>
+<label><input name=cat-status type=radio value=1.2-1.8>過瘦的成貓</label>
+<label><input name=cat-status type=radio value=1.1-1.4>中年貓咪7~11歲左右</label>
+<label><input name=cat-status type=radio value=1.1-1.6>老年貓咪11歲以上</label>
+<label><input name=cat-status type=radio value=1.6-2.0>懷孕中的貓咪</label>
+<label><input name=cat-status type=radio value=2.0->哺乳中的貓咪</label>
+<br>
+建議的卡路里：<span id=cat-weight-output></span>
+<script>function cal(ev){
+  if( ev.target.name=='cat-weight' || ev.target.name=='cat-status' ){
+    var weight = document.querySelector('[name=cat-weight]').value - 0;
+    var st = document.querySelector('[name=cat-status]:checked').value.split(/-/);
+    var rer = Math.pow(weight, .75) * 70;
+    if( st[1]=='' )
+      document.querySelector('#cat-weight-output').innerHTML = (rer * st[0] + .5 | 0) + '大卡以上';
+    else
+      document.querySelector('#cat-weight-output').innerHTML = (rer * st[0] + .5 | 0) + ' ~ ' + (rer * st[1] + .5 | 0) + ' 大卡';
+  }
+}
+document.body.addEventListener('change', cal);
+document.body.addEventListener('keyup', cal);
+cal({target: document.querySelector('[name=cat-weight]')});
+</script>
